@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f0f2f5;
             color: #333;
             display: flex;
             justify-content: center;
@@ -15,17 +15,54 @@
             height: 100vh;
             margin: 0;
             padding: 0;
+            overflow: hidden;
+            position: relative;
         }
+
+        /* Background shapes */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            top: -150px;
+            left: -150px;
+        }
+
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .shape-3 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            top: 50%;
+            left: 10%;
+        }
+
         .container {
             text-align: center;
             max-width: 800px;
             padding: 20px;
+            z-index: 1;
         }
+
         .subtitle-above {
             font-size: 1.2em;
             color: #666;
             margin-bottom: 20px;
         }
+
         .main-text {
             font-size: 3em;
             font-weight: bold;
@@ -33,6 +70,7 @@
             margin: 0;
             line-height: 1.2;
         }
+
         .subtitle-below {
             font-size: 1.2em;
             color: #666;
@@ -41,6 +79,10 @@
     </style>
 </head>
 <body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+    
     <div class="container">
         <p class="subtitle-above">Objectif: 500€</p>
         <h1 class="main-text">0€</h1>
