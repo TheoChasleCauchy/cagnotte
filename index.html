@@ -63,7 +63,7 @@
             text-align: center;
             max-width: 800px;
             padding: 40px 20px;
-            margin: -30px auto 0;
+            margin: -1px auto 0;
             position: relative;
             z-index: 1;
         }
@@ -92,31 +92,35 @@
         .info-icon {
             display: inline-block;
             margin-left: 10px;
+            /* Make the info icon appear upper */
+            vertical-align: 7%;
             position: relative;
             cursor: pointer;
             font-style: normal;
+            color: #1b84e6;
             font-size: 0.8em;
-            border: 1px solid #ccc;
+            border: 1px solid #103e69;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             text-align: center;
-            line-height: 20px;
+            line-height: 30px;
             background-color: #f9f9f9;
         }
 
         /* Style for the tooltip */
         .info-icon .tooltip {
             visibility: hidden;
-            width: 200px;
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 8px;
+            width: 400px;
+            background-color: #0f96e4;
+            color: #ffffff;
+            border: 1px solid #1b84e6;
+            text-align: justify;
+            border-radius: 10px;
+            padding: 12px;
             position: absolute;
             z-index: 2;
-            bottom: 125%; /* Position above the icon */
+            top: 125%; /* Position below the icon */
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
@@ -134,7 +138,11 @@
     <h1 class="page-title">
         La Cagnotte de Théo
         <span class="info-icon">i
-            <span class="tooltip">This is the tooltip text that appears on hover.</span>
+            <span class="tooltip">
+                Théo veut s'acheter une PS5 mais il est trop pauvre (Gngngn un ingénieur ça gagne bien sa vie gngngn).
+                <br>
+                Voici donc le compteur de la cagnotte !
+            </span>
         </span>
     </h1>
 
